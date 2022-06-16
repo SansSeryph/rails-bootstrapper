@@ -25,6 +25,19 @@ git add .
 git commit -m "Initialize new Rails project"
 
 ################################################################################
+## Rubocop
+################################################################################
+
+bundle add --group=development --require=false rubocop rubocop-rails \
+  rubocop-performance rubocop-rspec rubocop-rake rubocop-faker
+ln ~/Workspace/rails-bootstrapper/rubocop.yml ~/Workspace/podcast-site/.rubocop.yml
+bundle exec rubocop --autocorrect
+bundle exec rubocop --auto-gen-config
+mv .rubocop_todo.yml .rails_rubocop_ignores.yml
+git add .
+git commit -m "Add and configure Rubocop"
+
+################################################################################
 ## Use HAML instead of ERB
 ################################################################################
 
