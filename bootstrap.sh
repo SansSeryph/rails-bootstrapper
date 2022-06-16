@@ -19,7 +19,7 @@ asdf reshim nodejs
 ################################################################################
 
 cd ~/Workspace
-rails new --main --css=sass podcast-site
+rails new --css=sass podcast-site
 cd podcast-site
 git add .
 git commit -m "Initialize new Rails project"
