@@ -42,10 +42,9 @@ git commit -m "Add and configure Rubocop"
 ################################################################################
 
 bundle add haml-rails
-rails generate haml:application_layout convert
-rm app/views/layouts/applicaiton.html.erb
+env HAML_RAILS_DELETE_ERB=true bundle exec rails haml:erb2haml
 git add .
-git commit -m "Install haml-rails gem"
+git commit -m "Add and configure HAML"
 
 ################################################################################
 ## Install Devise
