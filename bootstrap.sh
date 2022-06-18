@@ -82,6 +82,7 @@ git commit -m "Add HAML gem and convert ERB files to HAML"
 # TODO: add route/controller/view for home? so that the root route below works
 
 bundle add devise
+# TODO: clean up Gemfile
 bundle exec rails generate devise:install
 # TODO: add the following line to `config/environments/development.rb`:
 # `config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }`
@@ -98,5 +99,6 @@ bundle exec rails generate devise user
 #       - pick modules in `app/models/user.rb`
 #       - go through `config/initializers/devise.rb`
 rm spec/models/user_spec.rb
+bundle exec rubocop --autocorrect
 git add .
 git commit -m "Add and configure Devise"
