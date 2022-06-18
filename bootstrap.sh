@@ -38,6 +38,32 @@ git add .
 git commit -m "Add and configure Rubocop"
 
 ################################################################################
+## Test Suite
+################################################################################
+
+# RSpec
+bundle add --group=development,test rspec-rails rubocop-rspec
+# TODO Move installed gems to right spot
+bundle exec rails generate rspec:install
+# TODO: make updates around rubocop.yml
+#       - move rspec rules to separate file (including require line)
+#       - hard link rspec rules file
+#       - cli command to add an includes statement in .rubocop.yml
+bundle exec rubocop --autocorrect
+git add .
+git commmit -m "Add and configure RSpec"
+
+# Factory Bot
+bundle add --group=development,test factory_bot_rails
+# TODO: move gem line to the right spot
+mkdir -p spec/support/
+ln ~/Workspace/rails-bootstrapper/factory_bot_rails.rb spec/support/
+# TODO: cli command to include the factory bot file in `spec/rails_helper.rb`
+bundle exec rubocop --autocorrect
+git add .
+git commmit -m "Add and configure Factory Bot"
+
+################################################################################
 ## Use HAML instead of ERB
 ################################################################################
 
