@@ -76,7 +76,27 @@ git add .
 git commit -m "Add HAML gem and convert ERB files to HAML"
 
 ################################################################################
-## Install Devise
+## Devise
 ################################################################################
 
-# TODO
+# TODO: add route/controller/view for home? so that the root route below works
+
+bundle add devise
+bundle exec rails generate devise:install
+# TODO: add the following line to `config/environments/development.rb`:
+# `config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }`
+# TODO: add the following as a comment to `config/environments/production.rb`:
+# `config.action_mailer.default_url_options = { host: <host>, port: <port> }`
+# TODO: add a root route to `config/routes.rb`: `root to: 'home#index'`
+# TODO: in `app/views/layouts/application.html.haml`, add the following lines:
+#       - .notice= notice
+#       - .alert= alert
+bundle exec rails generate devise:views
+HAML_RAILS_DELETE_ERB=true bundle exec rails haml:erb2haml
+bundle exec rails generate devise user
+# TODO: config devise:
+#       - pick modules in `app/models/user.rb`
+#       - go through `config/initializers/devise.rb`
+rm spec/models/user_spec.rb
+git add .
+git commit -m "Add and configure Devise"
