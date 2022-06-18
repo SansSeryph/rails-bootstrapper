@@ -28,9 +28,11 @@ git commit -m "Initialize new Rails project"
 ## Rubocop
 ################################################################################
 
-bundle add --group=development --require=false rubocop rubocop-rails \
-  rubocop-performance rubocop-rspec rubocop-rake rubocop-faker
-ln ~/Workspace/rails-bootstrapper/rubocop.yml ~/Workspace/podcast-site/.rubocop.yml
+bundle add --group=development --require=false rubocop-rails \
+  rubocop-performance rubocop-rake
+# TODO Move installed gems to right spot
+ln ~/Workspace/rails-bootstrapper/rubocop.yml \
+  ~/Workspace/podcast-site/.rubocop.yml
 bundle exec rubocop --autocorrect
 bundle exec rubocop --auto-gen-config
 mv .rubocop_todo.yml .rails_rubocop_ignores.yml
