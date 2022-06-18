@@ -21,6 +21,7 @@ asdf reshim nodejs
 cd ~/Workspace
 rails new --css=sass podcast-site
 cd podcast-site
+# TODO: clean up Gemfile
 git add .
 git commit -m "Initialize new Rails project"
 
