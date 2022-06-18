@@ -70,9 +70,9 @@ git commmit -m "Add and configure Factory Bot"
 ################################################################################
 
 bundle add haml-rails
-env HAML_RAILS_DELETE_ERB=true bundle exec rails haml:erb2haml
+HAML_RAILS_DELETE_ERB=true bundle exec rails haml:erb2haml
 git add .
-git commit -m "Add and configure HAML"
+git commit -m "Add HAML gem and convert ERB files to HAML"
 
 ################################################################################
 ## Install Devise
