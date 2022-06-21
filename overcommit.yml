@@ -1,0 +1,48 @@
+PreCommit:
+  EsLint:
+    enabled: true
+    required_executable: 'yarn'
+    command: ['yarn', 'run', 'eslint', '-f', 'compact']
+    on_warn: fail
+
+  HamlLint:
+    enabled: true
+
+  MergeConflicts:
+    enabled: true
+
+  RubySyntax:
+    enabled: true
+
+  RuboCop:
+    enabled: true
+    on_warn: fail
+    command: ['bundle', 'exec', 'rubocop']
+
+  TrailingWhitespace:
+    enabled: true
+    exclude:
+      - '**/db/structure.sql'
+
+  YamlSyntax:
+    enabled: true
+
+  YardCoverage:
+    enabled: true
+
+  YarnCheck:
+    enabled: true
+
+PostCheckout:
+  IndexTags:
+    enabled: true
+
+  BundleInstall:
+    enabled: true
+
+  YarnInstall:
+    enabled: true
+
+PrePush:
+  Rspec:
+    enabled: true

@@ -123,6 +123,16 @@ git add .
 git commit -m "Add and configure Eslint"
 
 ################################################################################
+## Overcommit
+################################################################################
+
+bundle add overcommit --group=development
+bundle add haml_lint --require=false --group=development
+bundle exec overcommit --install
+ln ~/Workspace/rails-bootstrapper/overcommit.yml \
+  ~/Workspace/podcast-site/.overcommit.yml
+
+################################################################################
 ## Post-Install Message
 ################################################################################
 
