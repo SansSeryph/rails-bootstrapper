@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    "import",
+    "jest",
+    "jsx-a11y",
+    "promise",
+    "testing-library"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "plugin:jsx-a11y/recommended",
+    "plugin:promise/recommended",
+    "plugin:testing-library/vue",
+    "plugin:vue/vue3-recommended"
+  ]
+}

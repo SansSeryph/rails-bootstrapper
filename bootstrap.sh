@@ -109,6 +109,20 @@ git add .
 git commit -m "Add Yard Gem"
 
 ################################################################################
+## Eslint
+################################################################################
+
+yarn add --dev eslint
+yarn add --dev eslint-plugin-jsx-a11y eslint-plugin-jest \
+  eslint-plugin-testing-library eslint-plugin-vue eslint-plugin-promise \
+  eslint-plugin-import
+ln ~/Workspace/rails-bootstrapper/eslintrc \
+  ~/Workspace/podcast-site/.eslintrc
+# TODO: add `yarn-error.log` to gitignore
+git add .
+git commit -m "Add and configure Eslint"
+
+################################################################################
 ## Post-Install Message
 ################################################################################
 
