@@ -32,8 +32,7 @@ git commit -m "Initialize new Rails project"
 
 bundle add --group=development --require=false rubocop-rails \
   rubocop-performance rubocop-rake
-ln ~/Workspace/rails-bootstrapper/rubocop.yml \
-  ~/Workspace/podcast-site/.rubocop.yml
+ln ~/Workspace/rails-bootstrapper/rubocop.yml .rubocop.yml
 bundle exec rubocop --autocorrect
 bundle exec rubocop --auto-gen-config
 mv .rubocop_todo.yml .rails_rubocop_ignores.yml
@@ -116,8 +115,7 @@ yarn add --dev eslint
 yarn add --dev eslint-plugin-jsx-a11y eslint-plugin-jest \
   eslint-plugin-testing-library eslint-plugin-vue eslint-plugin-promise \
   eslint-plugin-import
-ln ~/Workspace/rails-bootstrapper/eslintrc \
-  ~/Workspace/podcast-site/.eslintrc
+ln ~/Workspace/rails-bootstrapper/eslintrc .eslintrc
 # TODO: add `yarn-error.log` to gitignore
 git add .
 git commit -m "Add and configure Eslint"
@@ -129,8 +127,7 @@ git commit -m "Add and configure Eslint"
 bundle add overcommit --group=development
 bundle add haml_lint --require=false --group=development
 bundle exec overcommit --install
-ln ~/Workspace/rails-bootstrapper/overcommit.yml \
-  ~/Workspace/podcast-site/.overcommit.yml
+ln ~/Workspace/rails-bootstrapper/overcommit.yml .overcommit.yml
 
 ################################################################################
 ## Post-Install Message
