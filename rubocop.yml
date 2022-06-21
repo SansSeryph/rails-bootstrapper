@@ -8,3 +8,6 @@ require:
 
 Style/ClassAndModuleChildren:
   Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
